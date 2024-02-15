@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <title>Dos Guri</title>
+</head>
+<body>
+    <div class="logo">
+        <a href="./index.html">Listar todos</a>
+        <img src="assets/img/logo beth.png">
+        <a href="./form.html">Cadastrar</a>
+    
+    </div>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Quantidade</th>
+                    <th>Produto</th>
+                    <th>Valor</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="dados">
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <div class="end">
+            <p>R. Anèsia Venturini Zani, 62 - Centro, Jaguariúna - SP, 13820-000</p>
+        </div>
+        <p>© Copyright 2024, Dos Guri.</p>
+       
+    </footer>
+</body>
+<script>
+    const dados = document.getElementById('dados');
+    fetch('http://localhost:3000/Clientes')
+        .then(res => res.json())
+        .then(res => {
+            res.forEach(cli => {
+                dados.innerHTML += `
+                    <tr>
+                        <td>${cli.id}</td>
+                        <td>${cli.nome}</td>
+                        <td>${cli.quantidade}</td>
+                        <td>${cli.produto}</td>
+                        <td>${cli.valor}</td>
+                        <td>${cli.total}</td>
+                    </tr>
+                `;
+            });
+        });
+</script>
+</html>
