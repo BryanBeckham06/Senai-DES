@@ -3,12 +3,12 @@ const con = require("../connect/connect").con;
 
 //CRUD - create
 const create = (req, res) => {
-    let cpf = req.body.cpf;
+    let id = req.body.id;
     let nome = req.body.nome;
-    let sobrenome = req.body.sobrenome;
-    let nascimento = req.body.nascimento;
-    let query = `INSERT INTO clientes(cpf, nome, sobrenome, nascimento) VALUE`;
-    query += `('${cpf}', '${nome}', '${sobrenome}', '${nascimento}');`;
+    let descricao = req.body.descricao;
+    let valor = req.body.valor;
+    let query = `INSERT INTO clientes(id, nome, descricao, valor) VALUE`;
+    query += `('${id}', '${nome}', '${descricao}', '${valor}');`;
     con.query(query, (err, result) => {
         if (err)
             res.status(400).json(err).end();
@@ -33,11 +33,10 @@ const read = (req, res) => {
 //CRUD - Update
 const update = (req, res) => {
     let id = req.params.id;
-    let cpf = req.body.cpf;
     let nome = req.body.nome;
-    let sobrenome = req.body.sobrenome;
-    let nascimento = req.body.nascimento;
-    let query = `UPDATE clientes SET cpf = '${cpf}', nome = '${nome}', sobrenome = '${sobrenome}', nascimento = '${nascimento}' WHERE id = ${id}`;
+    let descricao = req.body.descricao;
+    let valor = req.body.valor;
+    let query = `UPDATE clientes SET id = '${id}', nome = '${nome}', descricao = '${descricao}', valor = '${valor}' WHERE id = ${id}`;
     con.query(query, (err, result) => {
         if (err)
             res.status(400).json(err).end;

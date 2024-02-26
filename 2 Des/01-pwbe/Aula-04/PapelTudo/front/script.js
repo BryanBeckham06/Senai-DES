@@ -7,7 +7,7 @@ const clientes = [];
 const cadastro = document.getElementById('cadastro');
 
 //Obter dados do back-end
-function loadClientes() {
+function loadclientes() {
     fetch(uri)
         .then(res => res.json())
         .then(res => {
@@ -25,9 +25,9 @@ function preencherTabela() {
         dados.innerHTML += `
                 <tr>
                     <td>${cli.id}</td>
-                    <td>${cli.cpf}</td>
                     <td>${cli.nome}</td>
-                    <td>${cli.sobrenome}</td>
+                    <td>${cli.descricao}</td>
+                    <td>${cli.valor}</td>
                     <td>${cli.nascimento.toString().split("T")[0]}</td>
                     <td>${calcIdade(cli.nascimento)}</td>
                     <td>
@@ -43,10 +43,10 @@ function preencherTabela() {
 criar.addEventListener('submit', e => {
     e.preventDefault();
     const data = {
-        cpf: criar.cpf.value,
+        id: criar.id.value,
         nome: criar.nome.value,
-        sobrenome: criar.sobrenome.value,
-        nascimento: criar.nascimento.value
+        descricao: criar.descricao.value,
+        valor: criar.valor.value
     };
     fetch(uri, {
         method: 'POST',
@@ -76,10 +76,10 @@ function update(btn) {
     let celulas = linha.cells;
     let id = celulas[0].innerHTML;
     let data = {
-        cpf: celulas[1].innerHTML,
+        id: celulas[1].innerHTML,
         nome: celulas[2].innerHTML,
-        sobrenome: celulas[3].innerHTML,
-        nascimento: celulas[4].innerHTML
+        descricao: celulas[3].innerHTML,
+        valor: celulas[4].innerHTML
     };
     fetch(uri + '/' + id, {
         method: 'PUT',
@@ -140,14 +140,3 @@ function mensagens(msg, titulo, confirma) {
     }
 }
 
-//Calcular idade a partir da data de nascimento
-function calcIdade(nascimento) {
-    let data = new Date(nascimento);
-    let hoje = new Date();
-    let idade = hoje.getFullYear() - data.getFullYear();
-    let mes = hoje.getMonth() - data.getMonth();
-    if (mes < 0 || (mes === 0 && hoje.getDate() < data.getDate())) {
-        idade--;
-    }
-    return idade;
-}

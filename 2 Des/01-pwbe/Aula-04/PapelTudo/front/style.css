@@ -11,7 +11,7 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    background: #050eb1;
+    background: #F38F00;
 }
 
 header {
@@ -55,14 +55,14 @@ button{
     cursor: pointer; 
 }
 a:hover {
-    background: #050eb1;
+    background: #F38F00;
     color: #fff;
     border-radius: 50px;
 }
 
 nav button{
     
-    background: #050eb1;
+    background: #F38F00;
     color: white;
     border: 4px solid;
     border-radius: 20px;
@@ -115,9 +115,10 @@ td {
 
 form {
     display: flex;
+    justify-content: center;
     max-width: 800px;
     padding: 20px;
-    background:#050eb1;
+    background:#F38F00;
     border-radius: 5px;
     margin: 20px 0;
     color: black;
@@ -157,10 +158,10 @@ textarea {
     max-width: 800px;
     display: flex;
     padding: 20px;
-    background:#050eb1;
+    background:#F38F00;
     border-radius: 12px;
     margin: 20px 0;
-    color: black;
+    color: white;
     align-items: center;
     position: relative;
 
@@ -213,4 +214,9 @@ textarea {
     border: rgb(32, 175, 0);
     color: white !important;
     font-weight: bolder;
+}
+.cabecario {
+    display: flex;
+    align-items: center;
+   justify-content: center;
 }
