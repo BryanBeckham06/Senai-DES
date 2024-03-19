@@ -21,7 +21,18 @@
     
  }
  
+.whatsapp img {
+    width: 60px;  
+    height: 60px;
 
+    position: fixed;
+   transition: 1s;
+    bottom: 5%;
+    right: 1%;
+}
+.whatsapp img:hover {
+   transform: scale(1.1);
+}
  
  .logo-principal img {
     width: 170px;
@@ -77,9 +88,199 @@
     height: 40px;
     filter: invert(100%);
  }
- .banner {
-    width: 100%;
-    width: 120vh;
-    background-color: red;
+ .slider{
+      margin:0 auto;
+      width: 1200px;
+      height: 500px;
+      overflow: hidden;
+      margin-top: 100px;
  }
- 
+ .slides{
+   width: 400%;
+   height: 500px;
+   display: flex;
+ }
+ .slides input {
+   display: none;
+ }
+ .slide {
+   width: 25%;
+   position: relative;
+   transition: 2s;
+ }
+ .slide img {
+   width: 1200px;
+   height: 500px;
+ }
+ .manual-navigation {
+   position: absolute;
+   width: 1200px;
+   display: flex;
+   justify-content: center;
+   margin-top: -100px;
+}
+.manual-btn{
+   border: 2px solid white;
+   padding: 5px;
+   border-radius: 10px;
+   cursor: pointer;
+   transition: 1s;
+}
+.manual-btn:not(:last-child) {
+   margin-right: 40px;
+}
+.manual-btn:hover {
+   background-color: white;
+}
+
+#radio1:checked ~ .first {
+   margin-left: 0;
+}
+#radio2:checked ~ .first {
+   margin-left: -25%;
+}
+#radio3:checked ~ .first {
+   margin-left: -50%;
+}
+#radio4:checked ~ .first {
+   margin-left: -75%;
+}
+.navigation-auto div{
+   border: 2px solid #20a6ff;
+   padding: 5px;
+   border-radius: 10px;
+   cursor: pointer;
+   transition: 1s;
+}
+   .navigation-auto{
+       position: absolute;
+      width: 1200px;
+      margin-top: 400px;
+      display: flex;
+      justify-content: center;
+
+   }
+   .navigation-auto div:not(:last-child) {
+       margin-right: 40px;
+   }
+   #radio1:checked ~ .navigation-auto .auto-btn1 {
+       background-color: #20a6ff;
+   }
+   #radio2:checked ~ .navigation-auto .auto-btn2 {
+       background-color: #20a6ff;
+   }
+   #radio3:checked ~ .navigation-auto .auto-btn3 {
+       background-color: #20a6ff;
+   }
+   #radio4:checked ~ .navigation-auto .auto-btn4 {
+       background-color: #20a6ff;
+   }
+   .slider2 {
+      display: flex;
+      justify-content: center;
+      margin-top: 100px;
+   }
+   .slider-firster {
+       display: flex;
+       align-items: center;
+       gap: 80px;
+       margin-bottom: 100px;
+      
+   }
+   .slider-firster img{
+      width: 80px;
+      height: 50px;
+
+      
+   }
+   .box {
+      display: flex;
+      justify-content: center;
+      width: 110px;
+      height: 70px;
+      align-items: center;
+      
+   }
+   .set img{
+      width: 30px;
+      height: 30px;
+   }
+   .slide1, .slide2{
+      display: none;
+   }
+   .active {
+      display: flex;
+   }
+
+   footer{
+      display: flex;
+      flex-direction: column;
+      background-color:black;
+
+      height: 800px;
+      justify-content: center;
+
+   }
+   .prime {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 250px;
+   }
+   .prime h1, p {
+      color: white;
+   }
+   .segund {
+      display: flex;
+     justify-content: center;
+   }
+   .calunas1 {
+      display: flex;
+      gap: 50px;
+   }
+   .email {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      
+   }
+   .email h1 {
+      font-size: 15px;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      margin-right: 130px;
+      margin-bottom: 10px;
+   }
+   .email input{
+      width: 300px;
+      height: 50px;
+      border-radius: 4px;
+      background-color: transparent;
+      border: 1px solid white;
+     
+   }
+   .email input ::placeholder {
+      color: grey;
+   }
+   .email p {
+      font-size: 15px;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      transform: translateX(-60px);
+   }
+   .butao {
+      display: flex;
+      align-items: center;
+    
+   }
+   .caluna h1 {
+      font-size: 20px;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+   }
+   .caluna p {
+      font-size: 15px;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      margin-top: 30px;
+   }
