@@ -1,3 +1,4 @@
+
 let count = 1;
 document.getElementById("radio1").checked = true;
 
@@ -23,13 +24,21 @@ seta.forEach((seta) => {
 })
 })
 
-var imgAtual = "assets/img/coracao1.png";
-var imgPrimeira = "assets/img/coracao.png";
+const hearts = document.queryselectorALL(".coracao");
 
-function trocar(){
-    document.getElementById("coracao").src = imgAtual;
-    let aux = imgAtual;
-    imgAtual= imgPrimeira;
-    imgPrimeira = aux;
-    
+hearts.foreach(heart, () => {
+    heart.addEventListener("click", () => {
+        if (!heart.classlist.contains("liked")) {
+        
+        heart.classlist.add("liked");
+
+        heart.src = "assets/img/coracao1.png";
+        } else {
+
+    heart.classlist.remove("liked");
+    heart.src = "assets/img/coracao.png"
 }
+})
+})
+
+    
