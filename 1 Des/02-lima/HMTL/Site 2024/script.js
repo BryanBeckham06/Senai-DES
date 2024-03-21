@@ -23,17 +23,13 @@ seta.forEach((seta) => {
 })
 })
 
-let count1 = 1;
-document.getElementById("set").checked = true;
+var imgAtual = "assets/img/coracao1.png";
+var imgPrimeira = "assets/img/coracao.png";
 
-setInterval( function(){
-    nextImage1();
-}, 4000)
-
-function nextImage1(){
-    count++;
-    if(count>4){
-        count = 1;
-    }
-    document.getElementById("set"+count1).checked = true;
+function trocar(){
+    document.getElementById("coracao").src = imgAtual;
+    let aux = imgAtual;
+    imgAtual= imgPrimeira;
+    imgPrimeira = aux;
+    
 }
