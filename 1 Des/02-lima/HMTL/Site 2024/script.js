@@ -24,21 +24,18 @@ seta.forEach((seta) => {
 })
 })
 
-const hearts = document.queryselectorALL(".coracao");
+const hearts = document.querySelectorAll(".coracao");
 
-hearts.foreach(heart, () => {
+hearts.forEach((heart) => {
     heart.addEventListener("click", () => {
-        if (!heart.classlist.contains("liked")) {
-        
-        heart.classlist.add("liked");
-
-        heart.src = "assets/img/coracao1.png";
-        } else {
-
-    heart.classlist.remove("liked");
-    heart.src = "assets/img/coracao.png"
-}
-})
+        if (!heart.classList.contains("liked")) {
+            heart.classList.add("liked");
+            heart.src = "assets/img/coracao.png";
+        }else{
+            heart.classList.remove("liked");
+            heart.src = "assets/img/coracao1.png"
+        }
+    })
 })
 
     
