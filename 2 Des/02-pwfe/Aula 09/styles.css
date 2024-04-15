@@ -1,0 +1,86 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:300);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+}
+.container{
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    flex-direction: column;
+}
+.controls {
+    margin-top: 100px;
+}
+.controls button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: 3px solid #17b970;
+    background-color: #17b970;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+.controls button:hover{
+    background-color: #0f9d58;
+}
+.song-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    color: white;
+    margin-top: 25px;
+    background-color: rgba(75, 73, 73, 0.473);
+    border-radius: 5px;
+}
+.cover-image {
+    width: 50px;
+    height: auto;
+    margin-right: 10px; 
+}
+.coverImage {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+
+}
+.playlist {
+    margin-top: 10px;
+    
+}
+.playlist ul {
+    list-style:none;
+    padding: 0;
+}
+
+.playlist li:hover {
+    background-color: #f9f9f9;
+    color: black;
+}
+.spotify {
+    width: 0;
+}
+.spotify img {
+    width: 35px;
+    height: 35px;
+   
+    transform: translateX(-50px) translateY(10px);
+    
+}
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.player {
+    margin-top: 50px;
+}
